@@ -1,0 +1,212 @@
+
+/* ESTILO GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7f5;
+    color: #344640;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    margin-bottom: 30px;
+}
+
+.encabezado h1 {
+    color: #244b43;
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.encabezado p {
+    color: #78877f;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* ACCIONES */
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.acciones p {
+    color: #78877f;
+    font-size: 14px;
+}
+
+/* BOTONES */
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* BOTON CREAR CAJA */
+
+#agregarCaja {
+    background: #244b43;
+    color: white;
+    padding: 13px 20px;
+}
+
+#agregarCaja:hover {
+    background: #193b34;
+}
+
+/* LISTA DE CAJAS */
+
+.cajas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+    align-items: start;
+}
+
+/* TARJETAS DE CAJAS */
+
+.caja {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e0e9e4;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(36, 75, 67, 0.06);
+    min-width: 0;
+}
+
+/* TITULO DE CADA CAJA */
+
+.caja h2 {
+    color: #244b43;
+    font-size: 21px;
+    margin: 0 0 15px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #e9efeb;
+    overflow-wrap: anywhere;
+}
+
+/* BOTON AGREGAR NOTA */
+
+.agregar-nota {
+    background: #397d6b;
+    color: white;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.agregar-nota:hover {
+    background: #286453;
+}
+
+/* NOTAS */
+
+.nota {
+    background: #edf5f0;
+    border: 1px solid #dceae1;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.nota p {
+    color: #40574d;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+/* BOTONES DE NOTAS */
+
+.editar-nota {
+    background: #e5eee8;
+    color: #315a49;
+}
+
+.borrar-nota {
+    background: #f8e8e6;
+    color: #b84d45;
+}
+
+/* BOTON BORRAR CAJA */
+
+.borrar-caja {
+    background: #f8e8e6;
+    color: #b84d45;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.borrar-nota:hover,
+.borrar-caja:hover {
+    background: #f0d7d4;
+}
+
+/* MENSAJE CUANDO NO HAY CAJAS */
+
+.vacio {
+    color: #89958e;
+    text-align: center;
+    padding: 35px 15px;
+    background: white;
+    border: 1px dashed #cbd9d0;
+    border-radius: 12px;
+    grid-column: 1 / -1;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .cajas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 25px 16px;
+    }
+
+    .encabezado h1 {
+        font-size: 27px;
+    }
+
+    .cajas {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .caja {
+        padding: 18px;
+    }
+}
